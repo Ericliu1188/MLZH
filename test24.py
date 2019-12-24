@@ -13,8 +13,8 @@ def log_in():
         find_pic_andclick('登录密码')
         pag.typewrite('lpy111888')
         find_pic_andclick('点击登录')
-    if find_pic_inscreen('登录过期'):
-        find_pic_andclick('登录过期')
+    # if find_pic_inscreen('登录过期'):
+        # find_pic_andclick('登录过期')
     find_pic_andclick('再试一次')
     find_pic_andclick('取消')
     find_pic_andclick('认证失败')
@@ -63,15 +63,14 @@ def jingjichang_action_after_findpic(shangdian=False):
     print('完成了一次检测~~, 休息一会')
 
 if __name__ == '__main__':
-    while True:
-        while find_pic_inscreen('点击登录'):
-            # get_out()
-            log_in()
-            time.sleep(1800)
-        while find_pic_inscreen("商店图标"):
-            jingjichang_action_after_findpic()
-        while find_pic_inscreen("竞技场商店"):
-            ugfight()
-
+	while True:
+	    while find_pic_inscreen('点击登录'):
+	        # get_out()
+	        log_in()
+	        time.sleep(1800)
+	    while find_pic_inscreen("商店图标"):
+	        jingjichang_action_after_findpic()
+	    while find_pic_inscreen("竞技场商店"):
+	        ugfight()
 
  
