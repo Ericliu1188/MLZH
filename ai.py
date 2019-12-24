@@ -7,7 +7,10 @@ randomlist = [1] * 155 + [987] * 3
 yijielist = [1] * 50 + [2] * 20 + [3, 4, 5] * 5
 print(randomlist)
 
-
+def log_in():
+	if find_pic_inscreen('登录界面'):
+		find_pic_andclick('重登确认')
+		pag.typewrite('lpy111888')
 def get_out():
     while not find_pic_inscreen('战斗图标'):
         find_pic_andclick('不结束游戏')
